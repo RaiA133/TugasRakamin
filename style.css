@@ -1,0 +1,545 @@
+body {
+    background-color: #F5F5F5;
+}
+
+/* FONT LEXEND DECA */
+.lexend-deca {
+    font-family: 'Lexend Deca', sans-serif;
+}
+.judul-text {
+    font-weight: 700;
+    font-size: 50px;
+}
+.footer-judul-text {
+    font-weight: 400;
+    font-size: 24px;
+}
+.desc-text {
+    font-weight: 400;
+    font-size: 18px;
+}
+.dark-blue-text {
+    color: #232340;
+}
+/* END FONT LEXEND DECA */
+
+
+/* bg & text color 007CBD */
+.transparant-bg {
+    background: #007CBD;
+}
+.soft-blue-text {
+    color: #5468E7;
+}
+/* END bg & text color 007CBD */
+
+
+/* NAVBAR */
+.navbar {
+    height: 52px;
+    width: 1195px; 
+}
+    .get-access-btn {
+        padding: 10px 44px 10px 44px;
+        background-color: rgba(84, 104, 231, 0.5);
+    }
+    .get-access-btn:hover {
+        background-color: rgba(84, 104, 231, 1);
+    }
+    .navbar-brand {
+        font-weight: 700; 
+        color: #F5F5F5;
+        font-size: 52px;
+    }
+/* END NAVBAR */
+
+
+/* CONTENT */
+.content-hero {
+    background-image: url(./assets/bg-hero.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
+}
+    .hero {
+        width: 563px;
+    }
+    .hero-email {
+        border-radius: 4px;
+        justify-items: center;
+        width: 298px;
+        height: 47px;
+        padding: 10px 44px 10px 44px;
+    }
+    .hero-desc {
+        width: 397px;
+    }
+    .early-access-btn {
+        border-radius: 4px;
+        padding: 10px 44px 10px 44px;
+        background: #5468E7; 
+        border: none;
+    }
+    .early-access-btn:hover {
+        color: none;
+    }
+    input[type="email"]::placeholder {
+        position: absolute;
+        opacity: 1;
+        left: 15px;
+    }
+    
+.mockup-box {
+    height: 654px;
+}
+    .mockup-desc {
+        width: 460px;
+    }
+
+.rotate-img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+    /* carousel */
+    .wrapper .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        width: 1500px;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-out;
+    } 
+    /* end carousel */
+
+/* END CONTENT */
+
+
+/* FOOTER */
+.footer-email {
+    color: white;
+    background-color: rgba(245, 245, 245, 0.24);
+    border-radius: 4px;
+    justify-items: center;
+    width: 268px;
+    height: 46px;
+    padding: 11px 16px 11px 16px;
+}
+    .footer-email::placeholder {
+        color: rgba(245, 245, 245, 1);
+    }
+    .footer-email:focus {
+        background-color: rgba(245, 245, 245, 0.24);
+
+    }
+/* END FOOTER */
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1300px) {
+    .wrapper .carousel {
+        width: 1265px;
+    }
+    .mockup1 {
+        margin-left: -70px; 
+    }
+    .desc-text {
+        width: 350px;
+    }
+    .review .desc-text {
+        width: 300px;
+    }
+    .footer .desc-text {
+        width: 300px;
+    }
+    .mockup4 {
+        left: -95px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .wrapper .carousel {
+        width: 1180px;
+    }
+    .navbar {
+        width: 970px;
+    }
+    .content-hero {
+        margin-left: -135px;
+    }
+    .mockup1-img {
+        width: 700px;
+    }
+    .mockup1 {
+        margin-right: 70px;
+    }
+    .mockup2-img {
+        margin-bottom: -55px;
+        width: 480px;
+    }
+    .mockup-desc {
+        margin-left: 50px;
+    }
+    .desc-text-footer {
+        width: 190px;
+    }
+    .copyright {
+        margin-left: -40px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .main-content {
+        width: 985px;
+    }
+    .navbar {
+        width: 800px;
+    }
+    .content-hero {
+        margin-left: 30px;
+        width: 990px;
+        height: 600px;
+        background-position-x: -6px;
+        margin-left: -1px;
+    }
+    .content-hero .container {
+        margin-left: 30px;
+    }
+    .mockup1-img {
+        width: 500px;
+    }
+    .mockup1 {
+        margin-left: 10px;
+        width: 300px;
+    }
+    .desc-text {
+        width: 300px;
+    }
+    .pt-5 {
+        padding-top: 0rem!important;
+    }
+    .my-5 {
+        margin-top: 0rem!important;
+        margin-bottom: 0rem!important;
+    }
+    .mockup2-img {
+        width: 400px;
+    }
+    .wrapper .carousel {
+        width: 980px;
+    }
+    .footer-email {
+        width: 160px;
+    }
+    .desc-text-footer {
+        width: 180px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .navbar {
+        width: 795px;
+    }
+    .judul-text {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .desc-text {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .content1 .desc-text, .content1 .judul-text  {
+        width: 500px;
+    }
+    .hero-desc {
+        width: 500px;
+    }
+    .hero {
+        margin-top: 70px;
+        width: 600px;
+    }
+    .early-access-btn {
+        border-radius: 4px;
+        padding: 10px 10px 10px 25px;
+    }
+    .email {
+        width: 407px;
+    }
+    .hero-email {
+        width: 195px;
+    }
+    .early-access-btn {
+        width: 195px;
+    }
+    .end-50 {
+        right: 55%!important;
+    }
+    .navbar-toggler-icon {
+        background-image: var(--bs-navbar-toggler-icon-bg);
+    }
+    .navbar-collapse .align-items-center {
+        align-items: end!important;
+    }
+    .navbar-nav .pe-5 {
+        font-size: 18px;
+        font-weight: bold;
+        padding-right: 0rem!important;
+    }
+    .navbar-nav .get-access-btn {
+        margin-top: 20px;
+    }
+    .content1 .mockup-box {
+        margin-top: 300px;
+    }
+    .content1 .mockup1-img {
+        width: 820px;
+        margin-top: -1700px;
+    }
+    .content2 {
+        margin-top: 120px!important;
+    }
+    .mockup2-img {
+        width: 400px;
+    }
+    .mockup-desc {
+        width: 300px; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 680px;
+    }
+    .hero {
+        margin-top: 120px;
+    }
+    
+    .main-content{
+        width: 750px;
+    }
+    
+    .hero-wrapper {
+        display: grid;
+        width: 750px;
+        grid-auto-flow: column;
+        overflow-x: hidden;
+    }
+    
+    .content-hero {
+        margin-left: 30px;
+        width: 1500px;
+        height: 920px;
+        background-position-x: -500px;
+        margin-left: -1px;
+    }
+    .content-hero .container {
+        margin-left: -25px;
+    }
+    .judul-text {
+        font-size: 50px;
+    }
+    .email {
+        width: 670px;
+    }
+    .hero-email {
+        width: 433px;
+    }
+    .early-access-btn {
+        width: 220px;
+    }
+    .early-access-btn {
+        padding: 10px 10px 10px 37px;
+    }
+    .email .end-50 {
+        right: 37%!important;
+    }
+
+    .content1 .mockup-box {
+        margin-left: -10px;
+        margin-top: 350px;
+    }
+    .content1 .mockup1-img {
+        content: url("./assets/suitcase-tablet.png");
+        margin-top: -1900px;
+        width: 715px;
+    }
+    .mockup1 {
+        margin-left: 30px;
+    }
+    .content2 .mockup-desc {
+        width: 200px;
+    }
+
+    .wrapper .carousel {
+        width: 750px;
+    }
+    .content1 .judul-text, .review .judul-text{
+        font-size: 50px;
+        width: 500px;
+    }
+    .judul-text {
+        font-size: 34px;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    body {
+        background-color: #212529;
+    }
+    .main-content {
+        width: 375px;
+    }
+    .navbar {
+        width: 300px;
+    }
+    .navbar-brand {
+        font-size: 42px;
+    }
+
+    .hero {
+        width: 200px;
+        margin-top: 200px
+    }
+    .hero-desc {
+        width: 280px;
+    }
+
+    .hero-email, .email {
+        width: 310px;
+        margin-bottom: 15px;
+    }
+    .email .top-50 {
+        top: 25%!important;
+    }
+    .email .end-50 {
+        right: 3%!important;
+    }
+    .early-access-btn {
+        width: 310px;
+        padding: 10px 10px 10px 78px;
+    }
+
+    .content-hero {
+        background-position-x: -850px;
+    }
+    .hero-wrapper {
+        width: 375px;
+    }
+
+    .content1 .mockup1-img {
+        content: url("./assets/suitcase-mobile.png");
+        margin-top: -1800px;
+        width: 375px;
+    }
+    .content1 .mockup-box {
+        margin-left: -15px;
+    }
+    .content1 .judul-text, .review .judul-text {
+        font-size: 34px;
+        color: #ADB5BD;
+        width: 375px;
+    }
+    .desc-text {
+        font-size: 16px;
+    }
+    .content1 .desc-text, .content1 .judul-text {
+        color: #ADB5BD;
+        width: 300px;
+    }
+    .mockup1 {
+        margin-left: 0px;
+    }
+
+    .content2 {
+        margin-top: 500px!important;
+    }
+    .content2 .judul-text {
+        color: #ADB5BD;
+    }
+    .content2 .mockup2-img {
+        width: 350px;
+    }
+    .content2 .mockup-box {
+        height: 654px;
+        margin-left: 0px;
+    }
+    .content2 .mockup-box-img {
+        margin-left: 10px;
+    }
+    .content2 .mockup-desc {
+        margin-top: 150px;
+        width: 300px;
+    }
+    .content2 .desc-text {
+        color: #ADB5BD; 
+        width: 290px;
+    }
+    .content2 .row {
+        margin-left: 315px;
+    }
+
+    .wrapper .carousel {
+        width: 480px;
+    }
+    .card-group-review {
+        margin-left: -110px;
+        margin-right: -110px;
+    }
+    
+    .review .judul-text {
+        width: 250px;
+    }
+    .review .card {
+        max-width: 260px;
+    }
+    .review .desc-text {
+        width: 180px;
+    }
+
+    .footer-email {
+        width: 325px;
+    }
+    .judul-footer {
+        margin-bottom: 170px!important;
+    }
+    .subscribe {
+        margin-top: -830px!important;
+    }
+    
+    .arrow-email-footer {
+        margin-left: -60px!important;
+    }
+    .review .desc-text {
+        width: 160px;
+    }
+
+    .footer .container {
+        width: 360px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 360px) {
+    .main-content {
+        width: 360px;
+    }
+
+    .hero-wrapper {
+        width: 360px;
+    }
+    .content1 .mockup1-img {
+        width: 360px;
+    }
+
+    .content1 .judul-text, .review .judul-text {
+        width: 330px;
+    }
+
+    .wrapper .carousel {
+        width: 470px;
+    }
+}
+/* END RESPONSIVE */
