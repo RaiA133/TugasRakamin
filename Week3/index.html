@@ -13,56 +13,68 @@
         <hr>
 
         <section>
-            <div class="row row-cols-1 row-cols-xl-4">
-                
-                <div class="col me-3 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <div class="input-group mb-3">
-                                <input type="number" class="form-control" id="suhuInput" placeholder="Masukan Suhu">
-                                <span class="input-group-text">°C</span>
-                            </div>
-                            <div class="d-grid mb-3">
-                                <button class="btn btn-primary btn-login fw-bold" type="submit" onclick="suhu()">
-                                    Submit
-                                </button>
-                            </div><hr>  
-                            <label class="fw-bold">Keadaan Benda : </label>
-                            <p class="card-text fs-4" id="suhu">belum diinput</p>   
-                        </div>
-                    </div>   
-                </div>
+            <div class="row row-cols-1 row-cols-xl-2">
+                <div class="col rounded-4 p-4">
+                    <div class="row row-cols-1 row-cols-xl-2">
 
-                <div class="col d-flex justify-content-center">
-                    <div class="card" style="width: 20rem;">
-                        <div class="card-body">
-                            <div class="d-grid mb-3">
-                                <select class="form-select" aria-label="Default select example" id="platInput">
-                                   <option class="dropdown-item" value="" selected disabled>Pilih Jenis Plat Kendaraan</option>
-                                   <option class="dropdown-item" value="motor" id="idMotor">Plat Motor Umum</option>
-                                   <option class="dropdown-item" value="kuning">Plat Kuning</option>
-                                   <option class="dropdown-item" value="putih">Plat Putih</option>
-                                   <option class="dropdown-item" value="merah">Plat Merah</option>
-                                   <option class="dropdown-item" value="hijau">Plat Hijau</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="number" class="form-control" id="ccInput" placeholder="Masukan jumlah CC Mobil" required>
-                                <span class="input-group-text">CC</span>
-                            </div>
-                            <div class="d-grid mb-3">
-                                <button class="btn btn-primary btn-login fw-bold" type="submit" onclick="bbm()">
-                                    Submit
-                                </button>
-                            </div><hr> 
-                            
-                            <label class="fw-bold">Jenis BBM : </label>
-                            <p class="card-text fs-4" id="bbm">belum diinput</p>   
+                        <div class="col mb-4 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="suhuInput" placeholder="Masukan Suhu">
+                                        <span class="input-group-text">°C</span>
+                                    </div>
+                                    <div class="d-grid mb-3">
+                                        <button class="btn btn-primary btn-login fw-bold" type="submit" onclick="suhu()">
+                                            Submit
+                                        </button>
+                                    </div><hr>  
+                                    <label class="fw-bold">Keadaan Benda : </label>
+                                    <p class="card-text fs-4" id="suhu">belum diinput</p>   
+                                </div>
+                            </div>   
                         </div>
-                    </div>   
-                </div>
 
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 20rem;">
+                                <div class="card-body">
+                                    <div class="d-grid mb-3">
+                                        <select class="form-select" aria-label="Default select example" id="platInput">
+                                           <option class="dropdown-item" value="" selected disabled>Pilih Jenis Plat Kendaraan</option>
+                                           <option class="dropdown-item" value="motor" id="idMotor">Plat Motor Umum</option>
+                                           <option class="dropdown-item" value="kuning">Plat Kuning</option>
+                                           <option class="dropdown-item" value="putih">Plat Putih</option>
+                                           <option class="dropdown-item" value="merah">Plat Merah</option>
+                                           <option class="dropdown-item" value="hijau">Plat Hijau</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="ccInput" placeholder="Masukan jumlah CC Mobil" required>
+                                        <span class="input-group-text">CC</span>
+                                    </div>
+                                    <div class="d-grid mb-3">
+                                        <button class="btn btn-primary btn-login fw-bold" type="submit" onclick="bbm()">
+                                            Submit
+                                        </button>
+                                    </div><hr> 
+                                    
+                                    <label class="fw-bold">Jenis BBM : </label>
+                                    <p class="card-text fs-4" id="bbm">belum diinput</p>   
+                                </div>
+                            </div>   
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col border rounded-4 p-4">
+                    <h4><b>JS</b> : Hitung Suhu & Jenis BBM</h4>
+                    <p>Raie Aswajjillah - FSWD 5B</p>
+                    <div class="ratio ratio-1x1">
+                        <iframe src="./Week 3_Raie Aswajjillah FSWD 5B_Rakamin Academy - Javascript fundamental.pdf" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
+
         </section>
     </div>
     <script>
