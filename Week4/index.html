@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Week 4 - Homework</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    <body data-bs-theme="">
+        <div id="liveAlertPlaceholder"></div>
+        <div class="container my-5 p-4 rounded-3 shadow">
+            <div class="container border border-dark p-3">
+                <p class="fw-bold text-center fs-5 text-uppercase position-relative">Array dengan jumlah index 100
+                    <button type="button" class="btn btn-secondary position-absolute top-0 end-0 fw-bold" id="liveAlertBtn">i</button>
+                </p>
+                <hr class="border border-dark"> 
+                <div class="overflow-x-auto">
+                    <table class="table table-light table-hover table-bordered border-black">
+                        <thead>
+                            <tr id="nilaiRandomIndex">
+                                <th class="text-center align-middle">INDEX</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="nilaiRandom">
+                                <th class="text-center align-middle">VALUE</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container mt-5 border border-dark p-3">
+                <p class="fw-bold text-center fs-5 text-uppercase">Array index Genap & Ganjil dengan jumlah index 50</p><hr class="">
+                <div class="overflow-x-auto">
+                    <table class="table table-light table-hover table-bordered border-black">
+                        <thead>
+                            <tr id="genapGanjilIndex">
+                                <th class="text-center align-middle">INDEX</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="arrGenap">
+                                <th scope="row" class="text-center align-middle">GENAP</th>
+                            </tr>
+                            <tr id="arrGanjil">
+                                <th scope="row" class="text-center align-middle">GANJIL</th>  
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container mt-5 border border-dark p-3">
+                <p class="fw-bold text-center fs-5 text-uppercase">Min, Max, Total, Rata rata pada setiap array (genap dan ganjil)</p><hr>
+                <div class="overflow-x-auto">
+                    <table class="table table-light table-hover table-bordered border-black">
+                        <thead>
+                            <tr>
+                                <th class="text-center" colspan="2">Nilai Array index GENAP</th>
+                                <th class="text-center" colspan="2">Nilai Array index GANJIL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nilai MAX</td>
+                                <td id="nilaiMaxGenap"></td>
+                                <td>Nilai MAX</td>
+                                <td id="nilaiMaxGanjil"></td>
+                            </tr>
+                            <tr>
+                                <td>Nilai MIN</td>
+                                <td id="nilaiMinGenap"></td>
+                                <td>Nilai MIN</td>
+                                <td id="nilaiMinGanjil"></td>
+                            </tr>
+                            <tr>
+                                <td>Nilai TOTAL</td>
+                                <td id="nilaiTotalGenap"></td>
+                                <td>Nilai TOTAL</td>
+                                <td id="nilaiTotalGanjil"></td>
+                            </tr>
+                            <tr>
+                                <td>Nilai Rata - Rata</td>
+                                <td id="nilaiRataRataGenap"></td>
+                                <td>Nilai Rata - Rata</td>
+                                <td id="nilaiRataRataGanjil"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container mt-5 border border-dark p-3">
+                <p class="fw-bold text-center fs-5 text-uppercase">Perbandingan nilai min, max, total dan rata rata</p><hr>
+                <div class="overflow-x-auto">
+                    <table class="table table-light table-hover table-bordered border-black">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Perbandingan Nilai MAX</th>
+                                <td id="bandingMax"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Perbandingan Nilai MIN</th>
+                                <td id="bandingMin"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Perbandingan Nilai TOTAL</th>
+                                <td id="bandingTotal"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Perbandingan Nilai RATA RATA</th>
+                                <td id="bandingRataRata"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border bg-body- py-4">
+            <div class="text-center text-dark fs-6 fw-bold">
+                @Copyright Raie Aswajjillah - FSWD05B - MSIB 5 - Rakamin Academy 2023 
+            </div>
+        </footer>
+
+        <script>
+            // alert
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible fixed-top" role="alert">`,
+                `   <div class="text-center">${message}. Untuk melihat soal klik <a href="https://rakamin-lms.s3.ap-southeast-1.amazonaws.com/7dkgljoq06rcwhkw947hn0u3k2x2?response-content-disposition=inline%3B%20filename%3D%22Homework%20Version%20Control.pdf%22%3B%20filename%2A%3DUTF-8%27%27Homework%2520Version%2520Control.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIATEHFT35YRRD7BK7S%2F20230908%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230908T090004Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=5eb273879402abfff42eb9abac6ae76f16db8627f608df4007bc648f33b1ec68" class="text-decoration-none">Disini</a></div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+            }
+
+            const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Pergi ke console untuk melihat kebenaran penggunaan data array dalam tugas ini!', 'secondary')
+            })
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
