@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi dan List Pendaftar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tabs mt-5">
+        <p class="d-inline-flex gap-1">
+            <button href="#" class="btn btn-primary" onclick="openTab('Registrasi')">Registrasi</button>
+            <button href="#" class="btn btn-primary" onclick="openTab('ListPendaftar')">List Pendaftar</button>
+        </p>
+    </div>
+    <div class="container my-5 rounded-4 shadow p-5 col-6">
+
+        <div id="Registrasi" class="tab-content">
+            <div class="mb-3 d-flex justify-content-between">
+                <p class="fw-bold mb-0 fs-1">Registrasi</p>
+                <p class="form-text mb-0 mt-4" id="keterangan"></p>
+            </div>
+            
+            <hr class="mb-4">
+
+            <form id="registrationForm" action="">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required minlength="10" autocomplete="off">
+                    <label for="floatingInput">Nama</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="umur" placeholder="Umur" name="umur" required min="25" autocomplete="off">
+                    <label for="floatingInput">Umur</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="uangSangu" placeholder="Uang Sangu" name="uangSangu" required min="100000" max="1000000" autocomplete="off">
+                    <label for="floatingInput">Uang Sangu (Rp)</label>
+                </div>
+
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary btn-lg fw-bold" onclick="submitForm()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="ListPendaftar" class="tab-content">
+            <div class="mb-3 d-flex justify-content-between">
+                <p class="fw-bold mb-0 fs-1">List Pendaftar</p>
+            </div>
+            <hr class="mb-4">
+            <table id="pendaftarTable" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Uang Sangu (Rp)</th>
+                    </tr>
+                </thead>
+                <tbody id="pendaftarBody">
+                </tbody>
+            </table>
+            <p id="resume"></p>
+        </div>
+
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -91,15 +91,15 @@ console.log("nilai array Perbandingan data TOTAL = ", bandingTotal);
 console.log("nilai array Perbandingan data Rata - Rata = ", bandingRataRata);
 
 nilaiRandom.forEach((item, index) => {
-    document.getElementById("nilaiRandomIndex").innerHTML += `<td class="fw-light text-center"> ${index} </td>`;
-    document.getElementById("genapGanjilIndex").innerHTML += `<td class="fw-light text-center"> ${index} </td>`;
-    document.getElementById("nilaiRandom").innerHTML += `<td class="text-center fs-4"> ${item} </td>`;
+    document.getElementById("nilaiRandomIndex").innerHTML += `<td class="fw-light text-center"> ${index} </td>`; //tabel 1#
+    document.getElementById("genapGanjilIndex").innerHTML += `<td class="fw-light text-center"> ${index} </td>`; //tabel 2#
+    document.getElementById("nilaiRandom").innerHTML += `<td class="text-center fs-4"> ${item} </td>`; //tabel 1#
 });
 arrGenap.forEach((item) => {
-    document.getElementById("arrGenap").innerHTML += `<td class="text-center fs-4 align-middle"> ${item} </td><td></td>`;
+    document.getElementById("arrGenap").innerHTML += `<td class="text-center fs-4 align-middle"> ${item} </td><td></td>`; //tabel 2#
 });
 arrGanjil.forEach((item) => {
-    document.getElementById("arrGanjil").innerHTML += `<td></td><td class="text-center fs-4 align-middle"> ${item} </td>`;
+    document.getElementById("arrGanjil").innerHTML += `<td></td><td class="text-center fs-4 align-middle"> ${item} </td>`; //tabel 2#
 });
 document.getElementById("nilaiMaxGenap").innerHTML = nilaiMaxGenap
 document.getElementById("nilaiMinGenap").innerHTML = nilaiMinGenap
