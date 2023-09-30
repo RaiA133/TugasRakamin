@@ -1,0 +1,11 @@
+{
+  "name": "luaskelilingsegitiga_raieaswajjillah",
+  "version": "1.0.0",
+  "description": "tugas rakamin week 7",
+  "main": "soal2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raie aswajjillah",
+  "license": "ISC"
+}

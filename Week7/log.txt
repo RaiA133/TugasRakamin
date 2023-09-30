@@ -1,0 +1,26 @@
+9/30/2023, 13:35:13 | Berhasil Menghitung Luas & Keliling Segitiga  
+9/30/2023, 13:35:28 | Berhasil Menghitung Luas & Keliling Segitiga  
+9/30/2023, 13:38:49 | Berhasil | Hitung Luas & Keliling Segitiga | luas : 100 | keliling : 30 
+9/30/2023, 13:39:14 Berhasil | Hitung Luas & Keliling Segitiga | luas : 100 | keliling : 30 
+9/30/2023, 13:40:46 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 240 | keliling : 15 
+9/30/2023, 13:49:19 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 240 & keliling : 15 
+9/30/2023, 13:51:14 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 240 & keliling : 15 
+9/30/2023, 14:17:10 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 100 & keliling : 15 
+9/30/2023, 14:19:52 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 858 & keliling : 36 
+9/30/2023, 14:20:48 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 31388 & keliling : 228 
+9/30/2023, 14:23:39 BERHASIL | Hitung Luas & Keliling Segitiga | luas : 100 & keliling : 15 
+9/30/2023, 14:31:47 BERHASIL | 858 luas : 858 & keliling : 36 
+9/30/2023, 14:32:00 BERHASIL | Hitung Luas & Keliling Segitiga |  luas : 858 & keliling : 36 
+9/30/2023, 14:39:03  | Hitung Luas & Keliling Segitiga |  luas : 858 & keliling : 36 
+9/30/2023, 15:21:10 Proram Hitung LUAS & KELILING Segitiga luas : 100 & keliling : 15 |  
+9/30/2023, 15:21:47 Proram Hitung LUAS & KELILING Segitiga luas : 858 & keliling : 36 |  
+9/30/2023, 15:28:23 BERHASil | Proram Hitung LUAS & KELILING Segitiga luas : 858 & keliling : 36 |  
+9/30/2023, 15:28:47 BERHASil | Proram Hitung LUAS & KELILING Segitiga luas : 31388 & keliling : 228 |  
+9/30/2023, 15:29:56 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 31388 & keliling : 228 |  
+9/30/2023, 15:31:09 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 100 & keliling : 15 
+9/30/2023, 15:32:56 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 858 & keliling : 36 
+9/30/2023, 15:34:30 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 31388 & keliling : 228 
+9/30/2023, 15:35:06 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 100 & keliling : 15 
+9/30/2023, 16:52:17 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 100 & keliling : 15 
+9/30/2023, 20:57:08 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 858 & keliling : 36 
+9/30/2023, 20:58:48 BERHASil | Proram Hitung LUAS & KELILING Segitiga | luas : 31388 & keliling : 228
