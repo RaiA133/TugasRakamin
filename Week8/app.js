@@ -4,7 +4,7 @@ const pool = require('./db/conn')
 const routing = require('./routes');
 const database = require('./database.json')
 const port = 3000; 
-
+    
 app.use('/data', routing)
 
 // CEK KONEKSI

@@ -1,0 +1,401 @@
+openapi: 3.0.3
+info:
+  title: Homework | Week 9 - RestfullAPI & Middleware
+  description: |-
+    RAIE ASWAJJILLAH - FSWD05B | KELOMPOK : 1
+    
+    
+    Ini adalah dokumentasi [swager](https://swagger.io) dari aplikasi Restfull API & Middleware pada homework pertemuan ke 9. 
+    
+    Pada soal 1 Saya ditugaskan untuk membuat RESTful API yang terdiri dari GET, POST, DELETE, dan PUT. Setelah itu membuat endpoint untuk register user dan login user untuk implementasi authorization dan authentication. dan  yang hanya bisa mengakses API hanyalah user yang terdaftar.
+    
+    Lalu pada soal ke-2, saya ditugaskan untuk  Lakukan Pagination pada GET users dan GET movies dengan limit 10 user.
+    
+    
+    
+    Semua links:
+    - [Link GIthub](https://github.com/RaiA133/TugasRakamin/tree/master/Week9)
+    - [Link Live App](https://raie-rakamintask.vercel.app/Week9/)
+    - [Link PDF Penjelasan](https://raie-rakamintask.vercel.app/Week9/RaieAswajjillah-FWSD05B-Week9-Rakamin-RestfullAPI_Middlewares.pdf)
+    
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/
+tags:
+  - name: POSTMAN
+    description: Aplikasi Test API yang digunakan
+    externalDocs:
+      description: Find out more
+      url: https://www.postman.com
+  - name: users
+    description: Semua HTTP Request di table users
+paths:
+  /auth/register:
+    post:
+      tags:
+        - users
+      summary: Register User Baru
+      description: Register a new user with email and password.
+      requestBody:
+        description: User registration details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user_REGISTER'
+        responses:
+        '200':
+          description: User registered successfully
+          content:
+            application/json:
+              example:
+                message: User registered successfully
+                data:
+                  id: 1
+                  email: user@example.com
+                  gender: Male
+                  role: user
+
+  /auth/login:
+    post:
+      tags:
+        - users
+      summary: Login User
+      description: Authenticate and login a user with email and password.
+      requestBody:
+        description: User login details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user_LOGIN'
+      responses:
+        '200':
+          description: User login successful
+          content:
+            application/json:
+              example:
+                message: Login successful
+                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzU2NzI0NTQsImV4cCI6MTYzNTY3MjU1NH0.7sHTQHVbXGZSR4G_C3EnupHnBZ1wRbHNLF3O2_vwPsg
+                data:
+                  email: user@example.com
+  
+  /movies/data:
+    get:
+      tags:
+        - movies
+      summary: Get Movies with Pagination
+      description: Get a list of movies with optional ordering and limiting.
+      parameters:
+        - in: query
+          name: order
+          schema:
+            type: string
+            enum: [ASC, DESC]
+            default: DESC
+          description: Sort order (ASC or DESC)
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Limit the number of results (default is 10)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Movies retrieved successfully
+                data:
+                  - id: 1
+                    title: Movie 1
+                    genres: Action
+                    year: 2022
+                  - id: 2
+                    title: Movie 2
+                    genres: Comedy
+                    year: 2023
+                    
+  /movies/data:
+    get:
+      tags:
+        - movies
+      summary: Get Movies with Pagination
+      description: Get a list of movies with optional ordering and limiting.
+      parameters:
+        - in: query
+          name: order
+          schema:
+            type: string
+          description: Sort order (ASC or DESC)
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Limit the number of results (default is 10)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Movies retrieved successfully
+                data:
+                  - id: 1
+                    title: Movie 1
+                    genres: Action
+                    year: 2022
+                  - id: 2
+                    title: Movie 2
+                    genres: Comedy
+                    year: 2023
+
+    post:
+      tags:
+        - movies
+      summary: Add a New Movie
+      description: Add a new movie to the database.
+      requestBody:
+        description: Movie object that needs to be added
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/movies_Post_data'
+      responses:
+        '201':
+          description: Movie added successfully
+          content:
+            application/json:
+              example:
+                message: Movie added successfully
+                data:
+                  id: 3
+                  title: New Movie
+                  genres: Drama
+                  year: 2024
+
+  /movies/data/{id}:
+    get:
+      tags:
+        - movies
+      summary: Get Movie by ID
+      description: Get details of a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to retrieve
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Movie retrieved successfully
+                data:
+                  id: 1
+                  title: Movie 1
+                  genres: Action
+                  year: 2022
+
+    put:
+      tags:
+        - movies
+      summary: Update Movie by ID
+      description: Update details of a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to update
+      requestBody:
+        description: Updated movie object
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/movies_Post_data'
+      responses:
+        '200':
+          description: Movie updated successfully
+          content:
+            application/json:
+              example:
+                message: Movie updated successfully
+                data:
+                  id: 1
+                  title: Updated Movie
+                  genres: Drama
+                  year: 2024
+
+    delete:
+      tags:
+        - movies
+      summary: Delete Movie by ID
+      description: Delete a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to delete
+      responses:
+        '200':
+          description: Movie deleted successfully
+          content:
+            application/json:
+              example:
+                message: Movie deleted successfully
+                data:
+                  id: 1
+                  title: Movie 1
+                  genres: Action
+                  year: 2022
+                  
+  /movies/data:
+    get:
+      tags:
+        - movies
+      summary: Get Movies with Pagination
+      description: Get a list of movies with optional ordering and limiting.
+      parameters:
+        - in: query
+          name: order
+          schema:
+            type: string
+          description: Sort order (ASC or DESC)
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Limit the number of results (default is 10)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Movies retrieved successfully
+                data:
+                  - id: 1
+                    title: Movie 1
+                    genres: Action
+                    year: 2022
+                  - id: 2
+                    title: Movie 2
+                    genres: Comedy
+                    year: 2023
+
+    post:
+      tags:
+        - movies
+      summary: Add a New Movie
+      description: Add a new movie to the database.
+      requestBody:
+        description: Movie object that needs to be added
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/movies_Post data'
+      responses:
+        '201':
+          description: Movie added successfully
+          content:
+            application/json:
+              example:
+                message: Movie added successfully
+                data:
+                  id: 3
+                  title: New Movie
+                  genres: Drama
+                  year: 2024
+
+  /movies/data/{id}:
+    get:
+      tags:
+        - movies
+      summary: Get Movie by ID
+      description: Get details of a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to retrieve
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Movie retrieved successfully
+                data:
+                  id: 1
+                  title: Movie 1
+                  genres: Action
+                  year: 2022
+
+    put:
+      tags:
+        - movies
+      summary: Update Movie by ID
+      description: Update details of a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to update
+      requestBody:
+        description: Updated movie object
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/movies_Post data'
+      responses:
+        '200':
+          description: Movie updated successfully
+          content:
+            application/json:
+              example:
+                message: Movie updated successfully
+                data:
+                  id: 1
+                  title: Updated Movie
+                  genres: Drama
+                  year: 2024
+
+    delete:
+      tags:
+        - movies
+      summary: Delete Movie by ID
+      description: Delete a movie by its ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID of the movie to delete
+      responses:
+        '200':
+          description: Movie deleted successfully
+          content:
+            application/json:
+              example:
+                message: Movie deleted successfully
+                data:
+                  id: 1
+                  title: Movie 1
+                  genres: Action
+                  year: 2022
