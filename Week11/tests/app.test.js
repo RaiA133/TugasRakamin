@@ -68,7 +68,7 @@ test('SOFT DELETE DATA TODO by ID', (done) => {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(response => {
-            expect(response.body.message).toBe("Todo Deleted!") // 
+            expect(response.body.message).toBe("Todo Deleted!")
             done()
         })
         .catch(done)
