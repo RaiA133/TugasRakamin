@@ -35,7 +35,7 @@ NODE_ENV=test npx sequelize-cli db:seed:all
 Lakukan ``NODE_ENV=test npx sequelize-cli db:migrate:undo`` jika ingin menghapus table, lalu ulang semua 
 
 ## Unit Testing
-Untuk menjalankan Unit Testing dengan Jest pastikan `DE_ENV=test`, lalu jalankan kode dibawah ini. Dan Pastikan jika kondisi table hw_week_11_rakamin_test fresh, eblum berubah setelah melakukan seeding.
+Untuk menjalankan Unit Testing dengan Jest pastikan `DE_ENV=test`, lalu jalankan kode dibawah ini. Dan Pastikan jika kondisi table hw_week_11_rakamin_test fresh, belum berubah setelah melakukan seeding.
 ```bash
 npm run test
 ```
