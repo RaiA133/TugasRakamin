@@ -1,5 +1,5 @@
-# # HOMEWORK - Week 11
-Raie Aswajjillah | FSWD-5B | Kelompok 1
+# # HOMEWORK - Week 11 
+Raie Aswajjillah | FSWD-5B | Kelompok 1 | Unit Testing & Development
 
 ```bash
 npm install
@@ -35,7 +35,7 @@ NODE_ENV=test npx sequelize-cli db:seed:all
 Lakukan ``NODE_ENV=test npx sequelize-cli db:migrate:undo`` jika ingin menghapus table, lalu ulang semua 
 
 ## Unit Testing
-Untuk menjalankan Unit Testing dengan Jest pastikan `DE_ENV=test`, lalu jalankan kode dibawah ini.
+Untuk menjalankan Unit Testing dengan Jest pastikan `DE_ENV=test`, lalu jalankan kode dibawah ini. Dan Pastikan jika kondisi table hw_week_11_rakamin_test fresh, eblum berubah setelah melakukan seeding.
 ```bash
 npm run test
 ```
@@ -45,3 +45,9 @@ jest akan secara otomatis menjalankan semua endpoint diantaranya dalam melakukan
 - POST `http://locahost:3000/create` ( Buat Data Todo Baru ) 
 - PUT `http://locahost:3000/update/:id` ( Update Data Todo Berdasarkan ID ) 
 - PUT `http://locahost:3000/delete/:id` ( Delete Data Todo Berdasarkan ID ) 
+
+## Swagger 
+Jika ketika access `http://locahost:3000/apic-docs` atau file `swagger/swagger.json` tidak ada / hilang / kosong, Jalankan Perintah dibawah untuk mengenerate otomatis file `swagger.json`.
+```bash
+npm run swagger
+```

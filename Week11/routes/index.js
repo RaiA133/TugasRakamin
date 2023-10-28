@@ -1,6 +1,6 @@
-const route = require('express').Router();
-const movieRoute = require('./todo');
+const route = require('express').Router()
+const movieRoute = require('./todo')
 
-route.use('/', movieRoute);
+route.use('/', movieRoute)
 
-module.exports = route;
+module.exports = route
