@@ -1,0 +1,39 @@
+image: docker:latest
+
+variables:
+  REPOSITORY_URL: raia133/hw11_todo-api-cicd
+  IMAGE_TAG: latest
+
+services:
+- docker:dind
+
+before_script:
+  - docker login --username=$DH_USERNAME --password=$DH_PASSWORD
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building image..."
+    - docker build
+      -t hw11_todo-api-cicd:latest
+      --build-arg PORT=$PORT
+      --no-cache .
+    - echo "Tangging image..."
+    - docker tag hw11_todo-api-cicd:latest $REPOSITORY_URL:latest
+    - echo "Pushing image..."
+    - docker push $REPOSITORY_URL:latest
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  script:
+    - docker stop hw11_todo-api-cicd || true && docker rm hw11_todo-api-cicd || true
+    - docker container run -dt -p $PORT:$PORT --name hw11_todo-api-cicd $REPOSITORY_URL:latest
+    - docker image prune -f
+  only:
+    - master
