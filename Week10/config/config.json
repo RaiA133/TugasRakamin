@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "postgres",
-    "password": "1maret2003",
+    "password": "root",
     "database": "hw_week10_rakamin",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "root",
     "database": "hw_week10_rakamin_test",
     "host": "127.0.0.1",
     "dialect": "mysql"

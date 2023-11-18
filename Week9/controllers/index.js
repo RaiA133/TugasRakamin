@@ -1,7 +1,7 @@
 require('dotenv').config();
 const pool = require('../db/database')
 const jwt = require('jsonwebtoken');
-const secretKey = process.env.JWT_SECRET_KEY || 'defaultSecretKey';
+const secretKey = process.env.JWT_SECRET || 'defaultSecretKey';
 
 class Controller {
 
